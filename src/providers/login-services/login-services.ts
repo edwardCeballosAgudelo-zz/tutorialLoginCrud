@@ -15,8 +15,10 @@ export class LoginServicesProvider {
   public login(postParams){
     let body = 'email=' + postParams.email;
     this.headersPost = new Headers({
-      'Content-Type':'application/x-www-form-urlencoded'
-    })
+      'Content-Type':'application/x-www-form-urlencoded',
+      'Access-Control-Allow-Origin':'*'
+    });
+
     let optionspost = new RequestOptions({
        headers: this.headersPost
     })

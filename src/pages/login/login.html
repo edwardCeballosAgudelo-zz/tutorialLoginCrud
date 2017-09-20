@@ -3,12 +3,12 @@
   <ion-list>
     <ion-item>
       <ion-label>Email</ion-label>
-      <ion-input type="email" [(ngModel)]="user.email"></ion-input>
+      <ion-input type="text" [(ngModel)]="email" required></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label>Contraseña</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" required></ion-input>
     </ion-item>
     <button ion-button block color="primary" (click)="login()">Iniciar Sesión</button>
   </ion-list>

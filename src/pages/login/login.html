@@ -1,0 +1,15 @@
+<ion-content padding>
+  <img src='http://ionicmaterial.com/demo/docs/img/ionic.png'/>
+  <ion-list>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Contraseña</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <button ion-button block color="primary" (click)="login()">Iniciar Sesión</button>
+  </ion-list>
+</ion-content>

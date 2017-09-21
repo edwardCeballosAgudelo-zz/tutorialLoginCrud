@@ -21,8 +21,13 @@ export class HomePage implements OnInit {
     this.getProducts();
   }
 
-  deleteProduct(){
-    
+  deleteProduct(id){
+    this.productServices.deleteProduct(this.token,id).then((pdct) => {
+      let respuesta = JSON.parse(pdct["_body"]);  
+      this.products = respuesta.products;     
+    }).catch((err) => {
+      console.log(err);
+    })
   }
 
   newProduct(){

@@ -10,7 +10,7 @@
   <ion-list inset>
     <ion-item ion-item *ngFor="let item of products">
       {{ item.name }}
-      <ion-icon name="trash" item-right (click)="deleteProduct()"></ion-icon>          
+      <ion-icon name="trash" item-right (click)="deleteProduct(item._id)"></ion-icon>          
     </ion-item> 
   </ion-list>
   <ion-fab right bottom>

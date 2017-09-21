@@ -58,7 +58,7 @@ export class ProductServicesProvider {
     });
   }
 
-  public deleteProduct(token){
+  public deleteProduct(token,id){
     this.headersPost = new Headers({
       'Content-Type':'application/x-www-form-urlencoded',
       'Access-Control-Allow-Origin':'*',
@@ -70,7 +70,7 @@ export class ProductServicesProvider {
     })
 
     return new Promise ((resolve, reject)=>{
-      this.http.get('https://api-rest-edward.herokuapp.com/api/product',optionspost)
+      this.http.delete('https://api-rest-edward.herokuapp.com/api/product/'+id,optionspost)
       .subscribe(res=>{
         resolve(res);
       },(err)=>{

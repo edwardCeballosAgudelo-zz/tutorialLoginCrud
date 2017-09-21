@@ -21,6 +21,10 @@ export class HomePage implements OnInit {
     this.getProducts();
   }
 
+  deleteProduct(){
+    
+  }
+
   newProduct(){
     this.navCtrl.setRoot(NewProductPage, {
       token: this.token

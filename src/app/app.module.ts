@@ -8,13 +8,16 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { NewProductPage } from "../pages/new-product/new-product";
 import { LoginServicesProvider } from '../providers/login-services/login-services';
+import { ProductServicesProvider } from '../providers/product-services/product-services';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    NewProductPage
   ],
   imports: [
     BrowserModule,
@@ -25,13 +28,15 @@ import { LoginServicesProvider } from '../providers/login-services/login-service
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    NewProductPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    LoginServicesProvider
+    LoginServicesProvider,
+    ProductServicesProvider
   ]
 })
 export class AppModule {}

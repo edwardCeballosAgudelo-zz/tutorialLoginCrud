@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>newProduct</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="saveProducts()">
+    <ion-list>
+      <ion-item>
+        <ion-label stacked>Name:</ion-label>
+        <ion-input type="text" placeholder="name" [(ngModel)]="name" name="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Picture:</ion-label>
+        <ion-input type="text" placeholder="picture" [(ngModel)]="picture" name="picture"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Price:</ion-label>
+        <ion-input type="number" placeholder="price" [(ngModel)]="price" name="price"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Category:</ion-label>
+        <ion-input type="text" placeholder="category" [(ngModel)]="category" name="category"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Description:</ion-label>
+        <ion-input type="text" placeholder="description" [(ngModel)]="description" name="description"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div padding>
+      <button ion-button block type="submit">Guardar</button>
+    </div>
+  </form>
+</ion-content>

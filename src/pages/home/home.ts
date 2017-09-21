@@ -25,6 +25,7 @@ export class HomePage implements OnInit {
     this.productServices.deleteProduct(this.token,id).then((pdct) => {
       let respuesta = JSON.parse(pdct["_body"]);  
       this.products = respuesta.products;     
+      this.getProducts();
     }).catch((err) => {
       console.log(err);
     })

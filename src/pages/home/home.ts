@@ -31,7 +31,7 @@ export class HomePage implements OnInit {
   }
 
   newProduct(){
-    this.navCtrl.setRoot(NewProductPage, {
+    this.navCtrl.push(NewProductPage, {
       token: this.token
     });   
   }
